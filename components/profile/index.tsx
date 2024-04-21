@@ -167,7 +167,7 @@ export default function Profile({
               {tabs.map((tab) => (
                 <button
                   key={tab.name}
-                  disabled={tab.name !== 'Profile'}
+                  // disabled={tab.name !== 'Profile'}
                   className={`${
                     tab.name === 'Profile'
                       ? 'border-white text-white'
@@ -255,6 +255,6 @@ export default function Profile({
 
 const tabs = [
   { name: 'Profile' },
-  { name: 'Work History' },
-  { name: 'Contact' }
+  // { name: 'Work History' },
+  // { name: 'Contact' }
 ];
