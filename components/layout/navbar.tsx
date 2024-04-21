@@ -28,21 +28,29 @@ export default function Navbar({
       </button>
       {status !== 'loading' &&
         (session?.user ? (
-          <Link href={`/${session.username}`}>
-            <a className="w-8 h-8 rounded-full overflow-hidden">
-              <Image
-                src={
-                  session.user.image ||
-                  `https://avatar.tobi.sh/${session.user.name}`
-                }
-                alt={session.user.name || 'User'}
-                width={300}
-                height={300}
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQYV2PYsGHDfwAHNAMQumvbogAAAABJRU5ErkJggg=="
-              />
-            </a>
-          </Link>
+          <div>
+            <Link href={`/${session.username}`}>
+              <a className="w-8 h-8 rounded-full overflow-hidden">
+                <Image
+                  src={
+                    session.user.image ||
+                    `https://avatar.tobi.sh/${session.user.name}`
+                  }
+                  alt={session.user.name || 'User'}
+                  width={300}
+                  height={300}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQYV2PYsGHDfwAHNAMQumvbogAAAABJRU5ErkJggg=="
+                />
+              </a>
+            </Link>
+            <button
+              onClick={() => signOut()}
+              className="ml-4 text-gray-700 hover:text-gray-900 focus:outline-none"
+            >
+              Sign Out
+            </button>
+          </div>
         ) : (
           <button
             disabled={loading}

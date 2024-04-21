@@ -64,8 +64,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const meta = {
     ...defaultMetaProps,
     title: `${user.name}'s Profile | xDev`,
-    ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
-    ogUrl: `https://mongodb.vercel.app/${user.username}`
+    ogImage: 'https://assets-global.website-files.com/6597cc7be68d63ec0c8ce338/65ba29f83c0546bf0be70ea6_og-multiversx.png',
+    // `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
+    ogUrl: `https://mvx.dev/${user.username}`
   };
 
   return {

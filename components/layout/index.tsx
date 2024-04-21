@@ -7,14 +7,14 @@ import { ResultProps } from '@/lib/api/user';
 import Meta, { MetaProps } from '@/components/layout/meta';
 import { useRouter } from 'next/router';
 import { LoadingDots } from '@/components/icons';
-import ClusterProvisioning from '@/components/layout/cluster-provisioning';
+// import ClusterProvisioning from '@/components/layout/cluster-provisioning';
 
 export default function Layout({
   meta,
   results,
   totalUsers,
   username,
-  clusterStillProvisioning,
+  // clusterStillProvisioning,
   children
 }: {
   meta: MetaProps;
@@ -26,7 +26,7 @@ export default function Layout({
 }) {
   const router = useRouter();
 
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   if (router.isFallback) {
     return (
@@ -37,9 +37,9 @@ export default function Layout({
   }
 
   // You should remove this once your MongoDB Cluster is fully provisioned
-  if (clusterStillProvisioning) {
-    return <ClusterProvisioning />;
-  }
+  // if (clusterStillProvisioning) {
+  //   return <ClusterProvisioning />;
+  // }
 
   return (
     <div className="w-full mx-auto h-screen flex overflow-hidden bg-black">

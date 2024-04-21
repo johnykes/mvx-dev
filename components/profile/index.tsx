@@ -122,7 +122,7 @@ export default function Profile({
             />
           </div>
           <div className="mt-6 sm:flex-1 sm:min-w-0 sm:flex sm:items-center sm:justify-end sm:space-x-6 sm:pb-1">
-            <div className="flex min-w-0 flex-1 items-center space-x-2">
+            <div className="flex min-w-0 flex-1 items-center space-x-2 items-center">
               <h1 className="text-2xl font-semibold text-white truncate">
                 {user.name}
               </h1>
