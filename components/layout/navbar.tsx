@@ -15,7 +15,8 @@ export default function Navbar({
 
   return (
     <nav
-      className="absolute right-0 w-full flex items-center justify-between md:justify-end px-4 h-16"
+      className="absolute right-0 w-full flex items-center justify-between md:justify-end"
+      style={{ padding: '2% 5%' }}
       aria-label="Navbar"
     >
       <button
@@ -29,7 +30,7 @@ export default function Navbar({
       {status !== 'loading' &&
         (session?.user ? (
           <div>
-            <Link href={`/${session.username}`}>
+            <Link legacyBehavior  href={`/${session.username}`}>
               <a className="w-8 h-8 rounded-full overflow-hidden">
                 <Image
                   src={
@@ -37,8 +38,9 @@ export default function Navbar({
                     `https://avatar.tobi.sh/${session.user.name}`
                   }
                   alt={session.user.name || 'User'}
-                  width={300}
-                  height={300}
+                  width={100}
+                  height={100}
+                  className="rounded-full mg-12"
                   placeholder="blur"
                   blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQYV2PYsGHDfwAHNAMQumvbogAAAABJRU5ErkJggg=="
                 />
