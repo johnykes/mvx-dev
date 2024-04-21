@@ -4,8 +4,8 @@ export const defaultMetaProps = {
   title: 'xDev',
   description:
     'MultiversX developers for hire and projects. Find the best developers for your projects.',
-  // ogImage: `https://assets.vercel.com/image/upload/v1654626375/twitter-cards/mongo-integration-starter.png`,
-  // ogUrl: 'https://mongodb.vercel.app'
+  ogImage: `https://assets-global.website-files.com/6597cc7be68d63ec0c8ce338/65ba29f83c0546bf0be70ea6_og-multiversx.png`,
+  ogUrl: 'https://mvx.dev'
 };
 
 export interface MetaProps {
