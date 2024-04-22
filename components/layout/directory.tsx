@@ -29,16 +29,17 @@ export default function Directory({
       <div className="px-6 pt-6 pb-0 sticky top-0 bg-black z-20">
         <Link legacyBehavior href="/">
           <a>
-            <div className="bg-dark-accent-1 hover:bg-dark-accent-2 transition-all rounded-2xl h-12 w-12 flex justify-center items-center">
-              <DirectoryIcon className="text-white" />
+            <div className="bg-dark-accent-1 hover:bg-dark-accent-2 transition-all rounded-2xl h-12 w-12 flex justify-center items-center font-extrabold p-8">
+              {/* <DirectoryIcon className="text-white" /> */}
+              <span style={{ color: 'var(--mvx-color)' }}>x</span><span style={{ color: 'white' }}>Dev</span>
             </div>
           </a>
         </Link>
         <p className="mt-8 text-2xl text-white font-bold">MultiversX developers</p>
         <p className="mt-2 text-sm text-dark-accent-5">
-          Search directory of {Intl.NumberFormat('en-us').format(totalUsers)}{' '}
-          developers
+          find your next mvx developer
         </p>
+        {/* {Intl.NumberFormat('en-us').format(totalUsers)}{' '} */}
         <form className="py-8 flex space-x-4" action="#">
           <div className="flex-1 min-w-0">
             <label htmlFor="search" className="sr-only">
