@@ -24,9 +24,9 @@ You will need to create a [GitHub OAuth App](https://docs.github.com/en/develope
 
 https://mvx.dev
 
-## Bugs
+## Known Bugs
 - authentication verification on the prod env
 - search not showing results
 
 ## Contributions
-Feel free to contribute!
+Your contributions are more than welcome! Together, let's create something truly amazing!

@@ -4,6 +4,7 @@ import { LoadingDots } from '@/components/icons';
 import Image from 'next/image';
 import { MenuIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
+import { redirect } from 'next/dist/server/api-utils';
 
 export default function Navbar({
   setSidebarOpen
@@ -54,20 +55,28 @@ export default function Navbar({
             </button>
           </div>
         ) : (
-          <button
+          <><button
             disabled={loading}
             onClick={() => {
               setLoading(true);
               signIn('github', { callbackUrl: `/profile` });
-            }}
-            className={`${
-              loading
+            } }
+            className={`${loading
                 ? 'bg-gray-200 border-gray-300'
-                : 'bg-black hover:bg-white border-black'
-            } w-36 h-8 py-1 text-white hover:text-black border rounded-md text-sm transition-all`}
+                : 'bg-black hover:bg-white border-black'} w-36 h-8 py-1 text-white hover:text-black border rounded-md text-sm transition-all mr-1`}
           >
             {loading ? <LoadingDots color="gray" /> : 'Log in with GitHub'}
-          </button>
+          </button><button
+            disabled={loading}
+            onClick={() => {
+              window.location.href = 'https://github.com/johnykes/mvx-dev';
+            } }
+            className={`${loading
+                ? 'bg-gray-200 border-gray-300'
+                : 'bg-black hover:bg-white border-black'} w-36 h-8 py-1 text-white hover:text-black border rounded-md text-sm transition-all`}
+          >
+              {loading ? <LoadingDots color="gray" /> : 'Contribute'}
+            </button></>
         ))}
     </nav>
   );
