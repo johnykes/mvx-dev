@@ -1,10 +1,6 @@
 # MongoDB Starter – Developer Directory
 
-A developer directory built on [Next.js](https://nextjs.org/) and [MongoDB Atlas](https://www.mongodb.com/atlas/database), deployed on [Vercel](https://vercel.com/) with the [Vercel + MongoDB integration](https://vercel.com/integrations/mongodbatlas).
-
-![](/public/og.png)
-
-Featured on the [MongoDB World](https://www.mongodb.com/world-2022) keynote.
+A developer directory started from [here](https://github.com/vercel/mongodb-starter).
 
 ## Deployment Instructions
 
@@ -26,16 +22,11 @@ You will need to create a [GitHub OAuth App](https://docs.github.com/en/develope
 
 ## Demo
 
-https://mongodb.vercel.app
+https://mvx.dev
 
-## Vercel + MongoDB Integration
+## Bugs
+- authentication verification on the prod env
+- search not showing results
 
-https://vercel.com/integrations/mongodbatlas
-
-## Tech Stack
-
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [NextAuth.js](https://next-auth.js.org/)
-- [MongoDB Atlas](https://www.mongodb.com/atlas/database)
-- [Vercel](https://vercel.com/)
+## Contributions
+Feel free to contribute!
